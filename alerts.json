@@ -1,0 +1,122 @@
+[
+    {
+        "timestamp": "2026-09-28 08:15:23",
+        "source_ip": "192.168.10.25",
+        "event_type": "Failed Login",
+        "severity": "Medium"
+    },
+    {
+        "timestamp": "2026-09-28 08:17:41",
+        "source_ip": "192.168.10.25",
+        "event_type": "Multiple Failed Logins",
+        "severity": "High"
+    },
+    {
+        "timestamp": "2026-09-28 08:25:10",
+        "source_ip": "192.168.10.42",
+        "event_type": "Successful Login",
+        "severity": "Low"
+    },
+    {
+        "timestamp": "2026-09-28 08:32:55",
+        "source_ip": "10.10.10.15",
+        "event_type": "Port Scan Detected",
+        "severity": "High"
+    },
+    {
+        "timestamp": "2026-09-28 08:45:17",
+        "source_ip": "192.168.10.31",
+        "event_type": "Malware Detection",
+        "severity": "Critical"
+    },
+    {
+        "timestamp": "2026-09-28 09:02:33",
+        "source_ip": "192.168.10.18",
+        "event_type": "Suspicious PowerShell",
+        "severity": "High"
+    },
+    {
+        "timestamp": "2026-09-28 09:14:09",
+        "source_ip": "172.16.0.44",
+        "event_type": "Unauthorized Access Attempt",
+        "severity": "High"
+    },
+    {
+        "timestamp": "2026-09-28 09:28:51",
+        "source_ip": "192.168.10.55",
+        "event_type": "Phishing Link Clicked",
+        "severity": "Medium"
+    },
+    {
+        "timestamp": "2026-09-28 09:40:22",
+        "source_ip": "10.10.10.21",
+        "event_type": "Firewall Block",
+        "severity": "Medium"
+    },
+    {
+        "timestamp": "2026-09-28 09:55:36",
+        "source_ip": "192.168.10.63",
+        "event_type": "Suspicious File Download",
+        "severity": "High"
+    },
+    {
+        "timestamp": "2026-09-28 10:07:14",
+        "source_ip": "172.16.0.18",
+        "event_type": "Brute Force Attempt",
+        "severity": "Critical"
+    },
+    {
+        "timestamp": "2026-09-28 10:20:45",
+        "source_ip": "192.168.10.77",
+        "event_type": "Account Locked",
+        "severity": "Medium"
+    },
+    {
+        "timestamp": "2026-09-28 10:33:27",
+        "source_ip": "10.10.10.32",
+        "event_type": "Unusual Outbound Connection",
+        "severity": "High"
+    },
+    {
+        "timestamp": "2026-09-28 10:48:02",
+        "source_ip": "192.168.10.81",
+        "event_type": "USB Device Connected",
+        "severity": "Low"
+    },
+    {
+        "timestamp": "2026-09-28 11:01:19",
+        "source_ip": "172.16.0.27",
+        "event_type": "Privilege Escalation Attempt",
+        "severity": "Critical"
+    },
+    {
+        "timestamp": "2026-09-28 11:16:43",
+        "source_ip": "192.168.10.91",
+        "event_type": "Antivirus Alert",
+        "severity": "Medium"
+    },
+    {
+        "timestamp": "2026-09-28 11:29:08",
+        "source_ip": "10.10.10.48",
+        "event_type": "DNS Anomaly",
+        "severity": "Medium"
+    },
+    {
+        "timestamp": "2026-09-28 11:42:31",
+        "source_ip": "192.168.10.103",
+        "event_type": "Suspicious Script Execution",
+        "severity": "High"
+    },
+    {
+        "timestamp": "2026-09-28 11:55:54",
+        "source_ip": "172.16.0.39",
+        "event_type": "Remote Login Attempt",
+        "severity": "Medium"
+    },
+    {
+        "timestamp": "2026-09-28 12:10:16",
+        "source_ip": "192.168.10.115",
+        "event_type": "Data Exfiltration Attempt",
+        "severity": "Critical"
+    }
+]
