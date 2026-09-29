@@ -76,3 +76,44 @@ The parser uses Python standard libraries only.
 ## Task 1 Result
 
 The parser successfully processes all 20 sample log files and produces a structured `alerts.json` file containing normalized security alerts ready for further SOC analysis and MITRE ATT&CK mapping.
+
+
+## Task 2: MITRE ATT&CK Mapping
+
+In Task 2, the 20 normalized security alerts from `alerts.json` were mapped to relevant MITRE ATT&CK techniques.
+
+### Mapping Process
+
+Each alert was reviewed based on its `event_type` and the security behavior it represents. The official MITRE ATT&CK Enterprise framework was used to research techniques and select the closest matching technique ID and name.
+
+Examples include:
+
+- Multiple failed login attempts were mapped to `T1110 - Brute Force`.
+- Port scanning was mapped to `T1046 - Network Service Discovery`.
+- Suspicious PowerShell activity was mapped to `T1059.001 - PowerShell`.
+- A phishing link click was mapped to `T1204.001 - Malicious Link`.
+- Suspicious script execution was mapped to `T1059 - Command and Scripting Interpreter`.
+
+Some sample alerts contain only general event descriptions and do not provide enough technical context to identify an exact adversary technique. In these cases, a best-fit technique was selected based on the behavior represented by the training alert.
+
+### Mapping Output
+
+The completed mappings are stored in:
+
+`mitre_mapping.csv`
+
+The CSV contains the following fields:
+
+- `alert_id`
+- `technique_id`
+- `technique_name`
+
+All 20 normalized alerts have a corresponding MITRE ATT&CK mapping.
+
+### Research Source
+
+The mappings were researched and verified using the official MITRE ATT&CK Enterprise website:
+
+https://attack.mitre.org/
+
+MITRE ATT&CK technique documentation was used to compare each alert's behavior with documented adversary techniques.
