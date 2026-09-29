@@ -7,7 +7,7 @@ alert_id,technique_id,technique_name
 6,T1059.001,PowerShell
 7,T1078,Valid Accounts
 8,T1204.001,Malicious Link
-9,T1562.004,Disable or Modify System Firewall
+9,T1686,Disable or Modify System Firewall
 10,T1105,Ingress Tool Transfer
 11,T1110,Brute Force
 12,T1531,Account Access Removal
