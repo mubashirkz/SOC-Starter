@@ -117,3 +117,62 @@ The mappings were researched and verified using the official MITRE ATT&CK Enterp
 https://attack.mitre.org/
 
 MITRE ATT&CK technique documentation was used to compare each alert's behavior with documented adversary techniques.
+
+---
+
+## Task 3 - Sigma Detection Rule
+
+### Objective
+The goal of Task 3 was to identify a common MITRE ATT&CK technique from the mapped alerts and create and test a Sigma detection rule.
+
+### Selected MITRE ATT&CK Technique
+**T1110 - Brute Force**
+
+T1110 was one of the most frequent techniques in `mitre_mapping.csv`, appearing twice. It was selected to detect failed login activity.
+
+### Sigma Rule
+The Sigma rule is stored in:
+
+`sigma/detect_brute_force.yml`
+
+The rule detects:
+- Failed Login
+- Multiple Failed Logins
+
+### Sigma Conversion
+The rule was successfully converted using Sigma CLI with the Elasticsearch/Lucene backend.
+
+Conversion command:
+
+`& "C:\Users\Mubashir\AppData\Local\Python\pythoncore-3.14-64\Scripts\sigma.exe" convert -t lucene --without-pipeline sigma\detect_brute_force.yml`
+
+Generated query:
+
+`event_type:("Failed Login" OR "Multiple Failed Logins")`
+
+The generated query is saved in:
+
+`sigma/elastic_query.txt`
+
+### Test Results
+The detection logic was tested against `alerts.json`.
+
+**Result: 2 matches**
+
+Matched events:
+1. Failed Login - Source IP: `192.168.10.25`
+2. Multiple Failed Logins - Source IP: `192.168.10.25`
+
+**PASS:** The detection successfully identified brute-force-related events in the sample alerts.
+
+Full test evidence is stored in:
+
+`sigma/test_evidence.txt`
+
+### Skills Practiced
+- Sigma rule syntax
+- MITRE ATT&CK mapping
+- Sigma CLI
+- Elastic/Lucene query conversion
+- Detection rule testing
+- SOC alert analysis

@@ -1,0 +1,26 @@
+title: Detect Brute Force Login Attempts
+id: 7d5b3f2a-5f36-4b84-9f5d-2a18d4c6e921
+status: experimental
+description: Detects failed and multiple failed login events that may indicate brute force activity.
+author: Mubashir Ahmad
+date: 2026-10-01
+
+logsource:
+  category: authentication
+
+detection:
+  selection:
+    event_type:
+      - 'Failed Login'
+      - 'Multiple Failed Logins'
+  condition: selection
+
+tags:
+  - attack.credential_access
+  - attack.t1110
+
+falsepositives:
+  - Users entering incorrect passwords
+  - Legitimate authentication errors
+
+level: medium

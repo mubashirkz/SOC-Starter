@@ -1,0 +1,23 @@
+Sigma Rule Test Evidence
+========================
+
+MITRE Technique: T1110 - Brute Force
+
+Rule:
+sigma/detect_brute_force.yml
+
+Generated Elastic/Lucene Query:
+event_type:("Failed Login" OR "Multiple Failed Logins")
+
+Test Source:
+alerts.json
+
+Test Result:
+MATCHES: 2
+
+Matched Events:
+1. Failed Login - Source IP: 192.168.10.25
+2. Multiple Failed Logins - Source IP: 192.168.10.25
+
+Result:
+PASS - The Sigma detection logic successfully identified brute-force related events in the sample alerts.
